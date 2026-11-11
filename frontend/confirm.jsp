@@ -20,7 +20,7 @@
       <tr><td class="py-1 text-slate-500">Date</td><td><%= a.getDate() %></td></tr>
       <tr><td class="py-1 text-slate-500">Time</td><td><%= a.getTime() %></td></tr>
       <tr><td class="py-1 text-slate-500">Status</td><td><%= a.getStatus() %></td></tr>
-      <tr><td class="py-1 text-slate-500">Fee</td><td>LKR <%= a.getConsultationFee() %></td></tr>
+     <tr><td class="py-1 text-slate-500">Fee</td><td>LKR <%= String.format("%,.2f", a.getConsultationFee()) %></td></tr>
     </table>
     <a href="book.jsp" class="inline-block mt-6 text-teal-700 underline">Book another</a>
   </div>
