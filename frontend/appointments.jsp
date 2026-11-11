@@ -52,6 +52,13 @@
                 <button type="submit" class="text-red-600 underline">Cancel</button>
               </form>
 <%
+                } else if (a.getStatus().equals("CANCELLED")) {
+%>
+              <form method="post" action="delete">
+                <input type="hidden" name="id" value="<%= a.getId() %>">
+                <button type="submit" class="text-slate-500 underline">Delete</button>
+              </form>
+<%
                 }
 %>
             </td>
