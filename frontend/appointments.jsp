@@ -4,15 +4,11 @@
 <%
     // The servlet puts the list here; it is never null when reached via /appointments
     List<Appointment> appointments = (List<Appointment>) request.getAttribute("appointments");
+    String pageTitle = "Appointments";
+    String activePage = "appointments";
 %>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Appointments</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-slate-50 text-slate-800 p-8">
+<%@ include file="/WEB-INF/includes/header.jspf" %>
+
   <div class="max-w-4xl mx-auto">
     <h1 class="text-2xl font-bold text-teal-700 mb-6">All Appointments</h1>
 
@@ -73,5 +69,5 @@
 
     <a href="book.jsp" class="inline-block mt-6 text-teal-700 underline">Book a new appointment</a>
   </div>
-</body>
-</html>
+
+<%@ include file="/WEB-INF/includes/footer.jspf" %>

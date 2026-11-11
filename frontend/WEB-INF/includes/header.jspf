@@ -1,0 +1,27 @@
+<%
+  String ctx = request.getContextPath();
+  String on  = "block px-3 py-2 rounded-lg bg-teal-100 text-teal-800 font-semibold";
+  String off = "block px-3 py-2 rounded-lg text-slate-700 hover:bg-teal-50";
+  String cBook  = "book".equals(activePage)         ? on : off;
+  String cAppt  = "appointments".equals(activePage) ? on : off;
+  String cPat   = "patients".equals(activePage)     ? on : off;
+%>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= pageTitle %> | MedBook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<div class="flex min-h-screen">
+  <aside class="w-56 shrink-0 bg-white border-r p-4">
+    <h1 class="text-xl font-bold text-teal-700 mb-6">MedBook</h1>
+    <nav class="space-y-1">
+      <a href="<%= ctx %>/book.jsp" class="<%= cBook %>">Book Appointment</a>
+      <a href="<%= ctx %>/appointments" class="<%= cAppt %>">Appointments</a>
+      <a href="<%= ctx %>/patients" class="<%= cPat %>">Patients</a>
+    </nav>
+  </aside>
+  <main class="flex-1 p-8">
