@@ -10,4 +10,8 @@ public class SpecialistAppointment extends Appointment {
     public double getConsultationFee() {
         return 3500.00; // LKR
     }
+        @Override
+    public String getType() {
+        return "SPECIALIST";
+    }
 }

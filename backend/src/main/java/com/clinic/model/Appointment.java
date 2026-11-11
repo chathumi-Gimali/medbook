@@ -32,9 +32,12 @@ public abstract class Appointment {
 
     // Polymorphism: each subclass returns its own fee
     public abstract double getConsultationFee();
+        // Polymorphism: each subclass reports its own type name for storage
+    public abstract String getType();
 
-    // Converts this object into one line of appointments.txt
+       // Converts this object into one line of appointments.txt (7 fields)
     public String toFileLine() {
-        return id + "|" + patientId + "|" + doctorId + "|" + date + "|" + time + "|" + status;
+        return id + "|" + patientId + "|" + doctorId + "|" + date + "|" + time
+             + "|" + status + "|" + getType();
     }
 }

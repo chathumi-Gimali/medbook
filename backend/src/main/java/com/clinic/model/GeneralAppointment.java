@@ -10,4 +10,8 @@ public class GeneralAppointment extends Appointment {
     public double getConsultationFee() {
         return 1500.00; // LKR
     }
+        @Override
+    public String getType() {
+        return "GENERAL";
+    }
 }
