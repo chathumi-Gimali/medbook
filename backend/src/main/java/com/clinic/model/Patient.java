@@ -18,4 +18,9 @@ public class Patient extends User {
     // Polymorphism: this is the role for every Patient
     @Override
     public String getRole() { return "PATIENT"; }
+
+        // Converts this patient into one line of patients.txt
+    public String toFileLine() {
+        return getId() + "|" + getName() + "|" + getEmail() + "|" + getPassword() + "|" + phone;
+    }
 }
